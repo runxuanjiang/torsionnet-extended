@@ -1,0 +1,15 @@
+# log files
+data/
+model_data
+train_data
+molecule_data
+
+
+#python utility files
+__pycache__/
+.ipynb_checkpoints/
+*/__pycache__/
+src/*.egg-info
+
+#vscode utility files
+.vscode/
