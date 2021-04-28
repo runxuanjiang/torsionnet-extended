@@ -6,8 +6,9 @@ from torsionnet.generate_molecule.molecule_wrapper import MoleculeWrapper
 xorgate = XorGate(gate_complexity=2, num_gates=4)
 xorgate = xorgate.polymer.stk_molecule
 
-building_block = list(xorgate.get_building_blocks())[0]
-BUILDING_BLOCKS = [building_block.to_rdkit_mol()]
+building_block = list(xorgate.get_building_blocks())[0].to_rdkit_mol()
+AllChem.EmbedMolecule(building_block, randomSeed=0)
+BUILDING_BLOCKS = [building_block]
 BUILDING_BLOCK_MAP = [0, 0, 0, 0]
 
 def get_building_block_torsion_id(torsion):

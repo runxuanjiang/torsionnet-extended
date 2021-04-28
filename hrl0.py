@@ -7,9 +7,11 @@ from torsionnet.utils import *
 from torsionnet.agents import PPORecurrentAgent
 from torsionnet.config import Config
 from torsionnet.environments import Task
-from torsionnet.generate_molecule import DIFF, XORGATE
 
-from .RTGN_batch_xorgate import RTGNBatchXorgate
+
+from RTGN_batch_xorgate import RTGNBatchXorgate
+from molecule import XORGATE
+import env
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
