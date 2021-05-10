@@ -68,7 +68,7 @@ class CriticBatchNet(torch.nn.Module):
         return v, (hx, cx)
 
 class ActorBatchNet(torch.nn.Module):
-    def __init__(self, action_dim, dim, edge_dim=1, num_features=3):
+    def __init__(self, action_dim, dim, edge_dim=1, num_features=3, building_blocks):
         super(ActorBatchNet, self).__init__()
         self.gnn = GraphInference(edge_dim, dim, num_features)
         self.set2set = gnn.Set2Set(dim, processing_steps=6)
@@ -112,7 +112,7 @@ class ActorBatchNet(torch.nn.Module):
         return logit, (hx, cx)
 
 class RTGNBatchXorgate(torch.nn.Module):
-    def __init__(self, action_dim, dim, edge_dim=7, point_dim=3):
+    def __init__(self, action_dim, dim, edge_dim=7, point_dim=3, building_blocks=4):
         super().__init__()
         num_features = point_dim
         self.action_dim = action_dim
