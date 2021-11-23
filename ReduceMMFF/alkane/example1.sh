@@ -3,7 +3,7 @@
 
 #“#SBATCH” directives that convey submission options:
 
-#SBATCH --job-name=torsionnet
+#SBATCH --job-name=example1
 #SBATCH --mail-user=runxuanj@umich.edu
 #SBATCH --cpus-per-task=20
 #SBATCH --gres=gpu:1
