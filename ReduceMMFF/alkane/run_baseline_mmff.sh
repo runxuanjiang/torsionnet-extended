@@ -3,7 +3,7 @@
 
 #“#SBATCH” directives that convey submission options:
 
-#SBATCH --job-name=example1
+#SBATCH --job-name=alkane_baseline_50
 #SBATCH --mail-user=runxuanj@umich.edu
 #SBATCH --cpus-per-task=20
 #SBATCH --gres=gpu:1
@@ -16,4 +16,4 @@
 
 # The application(s) to execute along with its input arguments and options:
 conda activate my-rdkit-env
-python -u example1.py
+python -u alkane_baseline_mmff.py 50
